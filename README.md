@@ -1,5 +1,7 @@
 # D2Vformer 
 
+## Introduction
+
 This is the pytorch implementation of D2Vformer. 
 
 The architecture of our model(D2Vformer) is shown as below:
@@ -41,7 +43,8 @@ Dateformer\datasets
 ### 4. Experimental setup
 The length of the historical input sequence is maintained at $96$(or $36$ for the illness dataset), whereas the length of the sequence to be predicted is selected from a range of values, i.e., $\{48, 96, 336\}$ ($\{24, 36, 48\}$ for the illness dataset). Note that the input length is fixed to be 96 for all methods for a fair comparison. The evaluation is based on the mean squared error (MSE) and mean absolute error (MAE) metrics
 
-
+## Comparison
+![D2Vformer](./imgs/D2Vformer.png)
 
 ## Contact
 
