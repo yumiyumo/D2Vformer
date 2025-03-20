@@ -20,7 +20,7 @@ The following are the baseline models included in this project (continuously upd
 - Fedformer [PDF](https://arxiv.org/pdf/2201.12740v3.pdf) [Code](https://github.com/MAZiqing/FEDformer)  (lCML 2022)
 - PatchTST [PDF](https://arxiv.org/pdf/2211.14730v2.pdf) [Code](https://github.com/yuqinie98/patchtst)  (ICLR 2023)
 - FITS [PDF](https://arxiv.org/pdf/2307.03756) [Code](https://github.com/VEWOXIC/FITS) (ICLR 2024)
-- TimeMixer [PDF](https://arxiv.org/pdf/2405.14616) [Code](https://github.com/kwuking/TimeMixer)) (ICLR 2024)
+- TimeMixer [PDF](https://arxiv.org/pdf/2405.14616) [Code](https://github.com/kwuking/TimeMixer) (ICLR 2024)
 - ......
 
 ## Setup
@@ -42,19 +42,19 @@ pip install -r requirements.txt
 <span id='Download the data'/>
 
 ### 👉2. Download the data
-We follow the same setting as previous work. The datasets for all the six benchmarks can be obtained from [[Autoformer](https://github.com/thuml/Autoformer)]. The datasets are placed in the 'all_six_datasets' folder of our project. The tree structure of the files are as follows:
+We follow the same setting as previous work. The datasets for all the six benchmarks can be obtained from [[Autoformer](https://github.com/thuml/Autoformer)]. The datasets are placed in the 'datasets' folder of our project. The tree structure of the files are as follows:
 
 ```
-Dateformer\datasets
-├─electricity
-│
-├─ETT-small
-│
-├─exchange_rate
-│
-├─illness
-│
-└─traffic
+datasets
+   ├─electricity
+   │
+   ├─ETT-small
+   │
+   ├─exchange_rate
+   │
+   ├─illness
+   │
+   └─traffic
 ```
 
 <span id='Experimental setup'/>
