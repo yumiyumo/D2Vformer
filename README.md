@@ -27,22 +27,12 @@ The following are the baseline models included in this project (continuously upd
 
 ### Table of Contents:
 
-- <a href='#Create conda environment'>1. Create conda environment</a>
-- <a href='#Install dependecies'>2. Install dependecies </a>
-- <a href='#Download the data'>3. Download the data</a>
-- <a href='#Experimental setup'>4. Experimental setup</a>
+- <a href='#Install dependecies'>1. Install dependecies </a>
+- <a href='#Download the data'>2. Download the data</a>
+- <a href='#Experimental setup'>3. Experimental setup</a>
 
-<span id='Create conda environment'/>
 
-### 1. Create conda environment(Optional)
-```
-conda create -n dateformer -y python=3.8 
-conda activate dateformer
-```
-
-<span id='Install dependecies'/>
-
-### 📝2. Install dependecies
+### 📝1. Install dependecies
 Install the required packages
 ```
 pip install -r requirements.txt
@@ -51,7 +41,7 @@ pip install -r requirements.txt
 
 <span id='Download the data'/>
 
-### 👉3. Download the data
+### 👉2. Download the data
 We follow the same setting as previous work. The datasets for all the six benchmarks can be obtained from [[Autoformer](https://github.com/thuml/Autoformer)]. The datasets are placed in the 'all_six_datasets' folder of our project. The tree structure of the files are as follows:
 
 ```
@@ -69,14 +59,14 @@ Dateformer\datasets
 
 <span id='Experimental setup'/>
 
-### 🚀4. Experimental setup
+### 🚀3. Experimental setup
 The length of the historical input sequence is maintained at $96$(or $36$ for the illness dataset), whereas the length of the sequence to be predicted is selected from a range of values, i.e., $\{48, 96, 336\}$ ($\{24, 36, 48\}$ for the illness dataset). Note that the input length is fixed to be 96 for all methods for a fair comparison. The evaluation is based on the mean squared error (MSE) and mean absolute error (MAE) metrics
 
 
-## 📧Time Series Forecasting
+## Time Series Forecasting
 ![D2Vformer](./imgs/results.png)
 
 
-## Contact
+## 📧Contact
 
 If there are any issues, please ask in the GitHub Issue module.
