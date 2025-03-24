@@ -1,6 +1,6 @@
 # D2Vformer 
 
-A official pytorch implementation for the paper: ' *D2Vformer: A Flexible Time Series Prediction Model Based on Time Position Embedding* '  Xiaobao Songa, Hao Wang\*a, Liwei Denga, Dong Wanga, Yuxin Heb, Wenming Caoa, and Chi-Sing Leungc
+A official pytorch implementation for the paper: ' *D2Vformer: A Flexible Time Series Prediction Model Based on Time Position Embedding* '  Xiaobao Song, Hao Wang, Liwei Deng, Dong Wang, Yuxin He, Wenming Cao, and Chi-Sing Leung [PDF](https://anonymous.4open.science/r/D2Vformer-77EC)
 
 ## 🎯Introduction
 
@@ -60,6 +60,25 @@ datasets
 <span id='Experimental setup'/>
 
 ### 🚀3. Experimental setup
+The experiment consists of three parts, namely "D2VFormer" for normal prediction, "DateVec" for comparing temporal characteristics, and "Flexible Prediction" for jump prediction. We have provided all the experimental scripts for the benchmark in the corresponding section of the `./scripts` folder, which covers all the benchmarking experiments. To reproduce the results, you can run the following shell code.
+
+```bash
+ ./D2Vformer/scripts/D2Vformer_s_train.sh
+ ./D2Vformer/scripts/D2Vformer_train.sh
+```
+
+```bash
+ ./Date2Vec/scripts/PatchTST_train.sh
+ ./Date2Vec/scripts/T2V_PatchTST_train.sh
+ ./Date2Vec/scripts/GLAFF_PatchTST_train.sh
+ ./Date2Vec/scripts/D2V_PatchTST_train.sh
+ ...
+```
+
+```bash
+ ./Flexib_Prediction/scripts/D2Vformer.sh
+```
+
 The length of the historical input sequence is maintained at $96$(or $36$ for the illness dataset), whereas the length of the sequence to be predicted is selected from a range of values, i.e., $\{48, 96, 336\}$ ($\{24, 36, 48\}$ for the illness dataset). Note that the input length is fixed to be 96 for all methods for a fair comparison. The evaluation is based on the mean squared error (MSE) and mean absolute error (MAE) metrics
 
 
@@ -67,6 +86,3 @@ The length of the historical input sequence is maintained at $96$(or $36$ for th
 ![D2Vformer](./imgs/results.png)
 
 
-## 📧Contact
-
-If there are any issues, please ask in the GitHub Issue module.
