@@ -68,7 +68,7 @@ Run "D2Vformer" experiments
  ./D2Vformer/scripts/D2Vformer_train.sh
 ```
 
-Run "flexible_prediction" experiments
+Run "Flexible_Prediction" experiments
 ```bash
  ./Flexib_Prediction/scripts/D2Vformer.sh
 ```
@@ -91,6 +91,11 @@ When you run the 'DateVec', we replace the position embedding method to investig
 Note that the input length is fixed to be 96 for all methods for a fair comparison. The evaluation is based on the mean squared error (MSE) and mean absolute error (MAE) metrics
 
 ## Time Series Forecasting
-![D2Vformer](./imgs/results.png)
+The results of regular time series forecasting
+![D2Vformer](./imgs/D2Vformer results.png)
 
+The results of flexible prediction.
+![D2Vformer](./imgs/Flexible prediction results.png)
 
+The evaluation of the performance of different timestamp embedding methods
+![D2Vformer](./imgs/DateVec results.png)
