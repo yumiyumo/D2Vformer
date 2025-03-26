@@ -92,10 +92,13 @@ Note that the input length is fixed to be 96 for all methods for a fair comparis
 
 ## Time Series Forecasting
 The results of regular time series forecasting
-![D2Vformer](./imgs/D2Vformer results.png)
+
+![D2Vformer](./imgs/D2Vformer_results.png)
 
 The results of flexible prediction.
-![D2Vformer](./imgs/Flexible prediction results.png)
+
+![D2Vformer](./imgs/Flexible_prediction_results.png)
 
 The evaluation of the performance of different timestamp embedding methods
-![D2Vformer](./imgs/DateVec results.png)
+
+![D2Vformer](./imgs/DateVec_results.png)
