@@ -1,6 +1,6 @@
 # D2Vformer 
 
-A official pytorch implementation for the paper: ' *D2Vformer: A Flexible Time Series Prediction Model Based on Time Position Embedding* '  Xiaobao Song, Hao Wang, Liwei Deng, Dong Wang, Yuxin He, Wenming Cao, and Chi-Sing Leung [PDF](https://anonymous.4open.science/r/D2Vformer-77EC)
+A official pytorch implementation for the paper: ' *D2Vformer: A Flexible Time Series Prediction Model Based on Time Position Embedding* ' 
 
 ## 🎯Introduction
 
