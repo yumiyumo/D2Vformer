@@ -60,13 +60,20 @@ datasets
 <span id='Experimental setup'/>
 
 ### 🚀3. Experimental setup
-The experiment consists of three parts, namely "D2VFormer" for normal prediction, "DateVec" for comparing temporal characteristics, and "Flexible Prediction" for jump prediction. We have provided all the experimental scripts for the benchmark in the corresponding section of the `./scripts` folder, which covers all the benchmarking experiments. To reproduce the results, you can run the following shell code.
+The experiment consists of three parts, namely "D2VFormer" for regular time series prediction, "Flexible_Prediction" for jump prediction, and "DateVec" for validating the effectiveness of D2V. We have provided all the experimental scripts for the benchmark in the corresponding section of the `./scripts` folder, which covers all the benchmarking experiments. To reproduce the results, you can run the following shell code.
 
+Run "D2Vformer" experiments
 ```bash
  ./D2Vformer/scripts/D2Vformer_s_train.sh
  ./D2Vformer/scripts/D2Vformer_train.sh
 ```
 
+Run "flexible_prediction" experiments
+```bash
+ ./Flexib_Prediction/scripts/D2Vformer.sh
+```
+
+Run "DateVec" experiments
 ```bash
  ./Date2Vec/scripts/PatchTST_train.sh
  ./Date2Vec/scripts/T2V_PatchTST_train.sh
@@ -75,12 +82,13 @@ The experiment consists of three parts, namely "D2VFormer" for normal prediction
  ...
 ```
 
-```bash
- ./Flexib_Prediction/scripts/D2Vformer.sh
-```
+When you run the D2Vformer, the length of the historical input sequence is maintained at $96$(or $36$ for the illness dataset), whereas the length of the sequence to be predicted is selected from a range of values, i.e., $\{48, 96, 336\}$ ($\{24, 36, 48\}$ for the illness dataset). 
 
-The length of the historical input sequence is maintained at $96$(or $36$ for the illness dataset), whereas the length of the sequence to be predicted is selected from a range of values, i.e., $\{48, 96, 336\}$ ($\{24, 36, 48\}$ for the illness dataset). Note that the input length is fixed to be 96 for all methods for a fair comparison. The evaluation is based on the mean squared error (MSE) and mean absolute error (MAE) metrics
+When you run the 'Flexible_Prediction', the length of the historical input sequence is maintained at $96$(or $36$ for the illness dataset), whereas the length of the interva is selected from a range of values, i.e., $\{6, 8, 10\}$ ($\{4, 6, 8\}$ for the illness dataset) and the length of the sequence to be predicted is selected from a range of values, i.e., $\{4, 8, 10\}$ ($\{2, 4, 8\}$ for the illness dataset). 
 
+When you run the 'DateVec', we replace the position embedding method to investigate the effectiveness of D2V.
+
+Note that the input length is fixed to be 96 for all methods for a fair comparison. The evaluation is based on the mean squared error (MSE) and mean absolute error (MAE) metrics
 
 ## Time Series Forecasting
 ![D2Vformer](./imgs/results.png)
